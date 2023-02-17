@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./css/styles.css') }}">
+    <title>Counter</title>
+</head>
+<body>
+<div class="container">
+    <h1>Counters</h1>
+    <p>Visits: {{ visits }}</p>
+    <p>Counter: {{ count }}</p>
+    <form action="{{ url_for('add') }}" method="POST">
+        <label for="increment">Enter Increment:</label>
+        <input type="number" id="increment" name="increment" value="1">
+        <button type="submit">+ Increment</button>
+    </form>
+    <form action="{{ url_for('destroy_session') }}">
+        <button type="submit" class="reset-btn">Reset</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Flask Session Counter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Add to Counter</h1>
+            <form action="{{ url_for('add') }}" method="post">
+                <label for="increment">Increment:</label>
+                <input type="number" id="increment" name="increment" min="1" value="1">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </body>
+</html>
